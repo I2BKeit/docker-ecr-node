@@ -1,17 +1,21 @@
 pipeline {
-agent any
-stages{
+    agent any
 
-  stage('verify Branch'){
-    steps{
-      echo "$GIT_BRANCH"
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
     }
-  }
-  stage("Build){
-        steps{
-          echo "Building my first app"
-        }
-        }
-}
-  
 }
