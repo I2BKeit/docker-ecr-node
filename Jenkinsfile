@@ -7,5 +7,11 @@ stages{
       echo "$GIT_BRANCH"
     }
   }
+  stage("Build){
+        steps{
+          echo "Building my first app"
+        }
+        }
 }
+  
 }
